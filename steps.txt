@@ -1,0 +1,18 @@
+//setting up Our Server
+1.step npm init -y to start package.json with default values. Make sure to change naming as you would like on package.json afterwards.
+2.install body-parser, express and nodemon(move nodemon to devDependencies)
+3.setup scripts start to nodemon server.js and go ahead and create server.js by touch server.js command
+4.go to server and do the esqueleton to start an express server const express = require('express') / const app = express() / app.listen(3000, () => {
+    console.log('app is running on port' )
+})
+5.do a basic get route.
+6 Now lets decide what routes do i need =
+ * / res = this is working 
+ * /signin --> POST and respond with sucess/fail
+ * /register --> POST AND response with new user object
+ * /profile/:id' --> GET = to get user by the Id
+ * /image --> PUT --> to increase image entry count
+
+ 7.import bodyParser =  require('body-parser')  // app.use(bodyParser.json())
+ 8.create /signin endpoint
+ 8.create /register endpoint
