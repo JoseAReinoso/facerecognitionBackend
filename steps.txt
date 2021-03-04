@@ -15,4 +15,12 @@
 
  7.import bodyParser =  require('body-parser')  // app.use(bodyParser.json())
  8.create /signin endpoint
- 8.create /register endpoint
+ 9.create /register endpoint
+ 10.create /profile endpoing
+ 11 create /image endpoing
+ 12.install bcrypt-node to protect passwords. (NOTE: Always send password info from front end using POST via HTTPS, and always make sure
+ to hash our passwords before inserting them to our database) read this link about security = https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8767508#notes
+
+ //connect front end to this server using localhost
+ 13. fetch('http://localhost:3001/') on the front end to start listening to your server on the react App.
+ 14. make sure to install CORS  = npm install cors
