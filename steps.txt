@@ -24,3 +24,11 @@
  //connect front end to this server using localhost
  13. fetch('http://localhost:3001/') on the front end to start listening to your server on the react App.
  14. make sure to install CORS  = npm install cors
+
+ //Lets create database
+ 15.Lets create the database and tables using postgreSQL (https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/12240608#notes)
+(https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/12240616#notes)
+(https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/22727187#notes)
+ 16. install knex for postgreSQL (https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8860472#notes)
+ to start connecting to your database
+
