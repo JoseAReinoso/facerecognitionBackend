@@ -50,3 +50,8 @@ and const bcrypt = require('bcrypt-nodejs'); first
 22. keep an eye on the transaction term here, which is use to keep relational databases consistent and would fail in a system failure.
 (watch video on top after minute 2)
 23.watch https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8862374#notes after minute 9
+
+//Clean code base
+24. Cleaning code by having a controllers folder and separate functions for each of the endpoints
+25. ill be doing "dependencies injections" from my server.js into each of the controller to make sure depencencies are passed through the next
+file.
