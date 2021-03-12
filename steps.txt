@@ -32,3 +32,21 @@
  16. install knex for postgreSQL (https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8860472#notes)
  to start connecting to your database
 
+ //Setup Register endpoint with database
+ 16.https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8860478#notes
+
+ //setup the get user by ID endpoint with database
+17.https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8860480#notes
+
+//setting the increment image count endpoing
+18. https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8862368#notes
+19. a bit of a note here... we will be using a SQL increment function http://knexjs.org/#Builder-increment that will increment that count
+for us vs us having to grab the current count of the database. and then add to it.
+
+//setting up the sign in endpoint and updating the login table using knex while encrypting the pasword using bcrypt
+20. https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8862374?start=0#notes
+21. hash passowrd const hash = bcrypt.hashSync(password)... make sure you npm install bcrypt-nodejs
+and const bcrypt = require('bcrypt-nodejs'); first
+22. keep an eye on the transaction term here, which is use to keep relational databases consistent and would fail in a system failure.
+(watch video on top after minute 2)
+23.watch https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8862374#notes after minute 9
