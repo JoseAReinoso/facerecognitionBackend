@@ -55,3 +55,24 @@ and const bcrypt = require('bcrypt-nodejs'); first
 24. Cleaning code by having a controllers folder and separate functions for each of the endpoints
 25. ill be doing "dependencies injections" from my server.js into each of the controller to make sure depencencies are passed through the next
 file.
+
+//Do validations on your endpoints to make sure when get error handling on when users are missing or
+provide wrong information
+26.on register make sure that users are providing name,email and password
+27.on login make sure that users are providing email and password
+
+//Lets move face detection API to backend to hide the key
+28.npm install clarifai
+29.on the image coontroller transfer the frontend code and make necessary changes
+30.So.. require clarifia ..then copy and paste app variable with the clairia api key in it 
+then... copy and paste from the the front end the part where we are accessing the clarifia 
+models = app.models.predict(Clarifai.FACE_DETECT_MODEL,this.state.input)
+31. where it says this.state.input, now we will be getting it from the send request from front end.
+example = it will be req.body.input vs on the front end this.state.input
+32.so knowing this make a imageAPIcall variable receiving req, res and export it to make another
+endpoint on server.js = app.post("/imageAPIcall",(req, res)=> {image.imageAPIcall(req, res)})
+33.on the front end make a fetch request to backend sending in the input.
+34.on the backend receive that input within the imageAPIcall function and return back data to frontend
+35.on the front end make sure you receive the response and convert this in json object and then
+let the app flow do the same as it was doing it before we started implementing this except this time
+we no longer showing api call on the webbrowser logs and we are secured.

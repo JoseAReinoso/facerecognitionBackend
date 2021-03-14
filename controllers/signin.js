@@ -1,11 +1,16 @@
 const signin = (req, res, db, bcrypt) => {
-db.select('email','hash').from('login')
-.where('email','=', req.body.email)
+    const {email,password} = req.body
+    if (!email || !password) {
+        return res.status(400).json("Missing Password or Email")
+    }else {
+
+        db.select('email','hash').from('login')
+.where('email','=', email)
 .then(data => {
-    const isValid = bcrypt.compareSync(req.body.password,data[0].hash)
+    const isValid = bcrypt.compareSync(password,data[0].hash)
     if(isValid){
        return db.select('*').from('users')
-        .where('email', '=', req.body.email)
+        .where('email', '=', email)
         .then(user => {
             res.status(200).json(user[0])
         })
@@ -15,6 +20,9 @@ db.select('email','hash').from('login')
     }
 })
 .catch(error => res.status(400).json('wrong credentials'))
+        
+    }
+
 }
 
 module.exports = {

@@ -43,6 +43,7 @@ app.post('/register', (req,res) => {register.register(req,res,db, bcrypt)})
 app.get('/profile/:id',(req, res) => {profile.profile(req, res,db)})
 
 app.put("/image",(req, res)=> {image.image(req, res,db)})
+app.post("/imageAPIcall",(req, res)=> {image.imageAPIcall(req, res)})
 
 app.listen(3001, () => {
     console.log('app is running on port' )

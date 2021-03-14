@@ -1,3 +1,15 @@
+const Clarifai = require('clarifai') ;
+const app = new Clarifai.App({
+    apiKey: process.env.CLARIFAI_KEY
+   });
+
+const imageAPIcall =(req, res) => {
+    app.models.predict(Clarifai.FACE_DETECT_MODEL,req.body.input)
+    .then(data => res.status(200).json(data))
+    .catch( error => res.status(400).json("from clarifai API", error))
+}   
+
+
 const image = (req,res, db) => {
     const {id} = req.body;
     //where the id on database enquals id inputted by frontend increment count of entries by 1.
@@ -11,5 +23,6 @@ const image = (req,res, db) => {
 }
 
 module.exports = {
-    image
+    image,
+    imageAPIcall
 }
