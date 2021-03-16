@@ -84,3 +84,5 @@ we no longer showing api call on the webbrowser logs and we are secured.
 39. git push heroku master to push code to my account and also to deploy it.
 40. "heroku open" to open the deployed link
 41. most likely you will get an error after first deployement, check details with "heroku logs --tail"
+42. I noticed i did not add the variables = you can add them here (same way you have it on your .env) https://dashboard.heroku.com/apps/damp-brook-10306/settings
+43. once you add variables, try to run heroku open and see if you still getting error.
