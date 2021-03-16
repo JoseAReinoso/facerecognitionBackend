@@ -45,6 +45,6 @@ app.get('/profile/:id',(req, res) => {profile.profile(req, res,db)})
 app.put("/image",(req, res)=> {image.image(req, res,db)})
 app.post("/imageAPIcall",(req, res)=> {image.imageAPIcall(req, res)})
 
-app.listen(3001, () => {
-    console.log('app is running on port' )
+app.listen(process.env.PORT || 3001, () => {
+    console.log(`app is running on port ${process.env.PORT}` )
 })

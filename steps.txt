@@ -80,3 +80,5 @@ we no longer showing api call on the webbrowser logs and we are secured.
 //deploying this in heroku
 36. install heroku
 37. heroku create... that will give me a .git link = https://damp-brook-10306.herokuapp.com/ | https://git.heroku.com/damp-brook-10306.git
+38. heroku git:remote -a damp-brook-10306 (you can do "git remote -v" to see the versions registered on both git and heroku)
+39. git push heroku master to push code to my account and also to deploy it.
