@@ -86,3 +86,15 @@ we no longer showing api call on the webbrowser logs and we are secured.
 41. most likely you will get an error after first deployement, check details with "heroku logs --tail"
 42. I noticed i did not add the variables = you can add them here (same way you have it on your .env) https://dashboard.heroku.com/apps/damp-brook-10306/settings
 43. once you add variables, try to run heroku open and see if you still getting error.
+44. install postgreSQL for heroku https://www.heroku.com/postgres
+45. Use the "heroku addons" command to determine whether your app already has Heroku Postgres provisioned:
+46. you can also see whats left on  your free plan of heroku postgreSQL = heroku pg:info
+47. Connect to the heroku database by running "heroku pg:psql"
+48. Once in go ahead and create tables for it CREATE TABLE login(id serial PRIMARY KEY, hash varchar(100) NOT NULL, email text UNIQUE NOT NULL);
+and damp-brook-10306::DATABASE=> CREATE TABLE users (id serial PRIMARY KEY, name VARCHAR(100), email text UNIQUE NOT NULL, entries BIGINT DEFAULT 0, joined TIMESTAMP NOT
+NULL);
+49. see tables list command =  \d
+
+//Connecting your backend to your server
+50. start by seing your database info heroku pg:info and copy the link on where it says Add-on:
+51.update this on your .env file key DB_HOST enviroment variables on heroku
