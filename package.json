@@ -4,7 +4,8 @@
   "description": "Backend for face recoginition app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "start:dev":"nodemon server.js"
   },
   "keywords": [],
   "author": "",
