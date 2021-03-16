@@ -76,3 +76,7 @@ endpoint on server.js = app.post("/imageAPIcall",(req, res)=> {image.imageAPIcal
 35.on the front end make sure you receive the response and convert this in json object and then
 let the app flow do the same as it was doing it before we started implementing this except this time
 we no longer showing api call on the webbrowser logs and we are secured.
+
+//deploying this in heroku
+36. install heroku
+37. heroku create... that will give me a .git link = https://damp-brook-10306.herokuapp.com/ | https://git.heroku.com/damp-brook-10306.git
