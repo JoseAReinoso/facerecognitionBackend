@@ -10,7 +10,7 @@ const image = require('./controllers/image')
 const profile = require('./controllers/profile')
 
 
-
+//if connecting to my heroku posgres databse
 const db = knex({
     client:"pg",
     connection: {
@@ -19,6 +19,22 @@ const db = knex({
 
     }
 });
+/* if connecting to the development database on my pc
+const db = require("knex")({
+  client: "pg",
+  connection: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password:process.env.DB_PASS,
+    database: process.env.DB_NAME
+  }
+});
+});
+
+*/
+
+
+
 /* to console.log user list from users table that lives in the facerecognition database
 db.select('*').from('users').then(data => {
     console.log("Console logging the data from users table inside of facerecognition database",data)

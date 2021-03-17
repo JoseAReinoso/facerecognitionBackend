@@ -96,5 +96,7 @@ NULL);
 49. see tables list command =  \d
 
 //Connecting your backend to your server
-50. start by seing your database info heroku pg:info and copy the link on where it says Add-on:
-51.update this on your .env file key DB_HOST enviroment variables on heroku
+50. set knex up like this   connection: {
+        connectionString:process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false }
+what this will do is that it will read the process.env.DATABASE_URL living on herokus computer and will be providing the database url needed.
